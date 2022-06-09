@@ -25,6 +25,7 @@ cpi = cpi %>%
                            date == 'Noviembre' ~ 11,
                            date == 'Diciembre' ~ 12),
          date = ym(paste(year, month))) %>%
+  arrange(date) %>%
   select(date, cpi)
 
 # Save clean csv
